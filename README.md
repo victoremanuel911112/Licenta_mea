@@ -24,7 +24,7 @@ Acest proiect reprezinta lucrarea mea de licenta ce a dezvoltat un sistem de mon
   -Programare orientata pe module
 
 4. Structura proiectului
-  1. Sectiunea Import-uri si configurare - Importa toate bibliotecile necesare si are functia de a detecta platforma de rulare
+  -Sectiunea Import-uri si configurare - Importa toate bibliotecile necesare si are functia de a detecta platforma de rulare
   2. Sectiunea Functii utilitare hardware - Functii pentru citirea si conversia datelor de la senzori
   3. Sectiunea Range-uri Optimale - Defineste intervalele optime pentru fiecare parametru de mediu
   4. Sectiunea Baze de date - Gestioneaza persistenta datelor in SQLite
