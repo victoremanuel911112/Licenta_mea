@@ -22,49 +22,19 @@ Acest proiect reprezinta lucrarea mea de licenta ce a dezvoltat un sistem de mon
   -GPIO/I2C/SPI
   -Senzori de mediu
   -Programare orientata pe module
-4. Structura Proiectului
-  ┌─────────────────────────────────────────────────┐
-│         HARDWARE RASPBERRY PI                    │
-├─────────────────────────────────────────────────┤
-│ DHT22 (GPIO26)  →  Temp + Umiditate            │
-│ ADS1115 (I2C)   →  Lumină + Calitate Aer       │
-│ 8x LED (GPIO)   ←  Feedback vizual              │
-└──────────────┬──────────────────────────────────┘
-               │
-               ↓
-┌─────────────────────────────────────────────────┐
-│         LAYER HARDWARE (Python)                  │
-├─────────────────────────────────────────────────┤
-│ SensorManager  →  Citește senzori (2-3 sec)    │
-│ LEDManager     →  Controlează LED-uri           │
-└──────────────┬──────────────────────────────────┘
-               │
-               ↓
-┌─────────────────────────────────────────────────┐
-│         LAYER BUSINESS LOGIC                     │
-├─────────────────────────────────────────────────┤
-│ Monitorizare continuă (±3 lux pentru lumină)   │
-│ Logica voturilor (media → schimbare)           │
-│ Verificare stabilitate (3 confirmări)          │
-└──────────────┬──────────────────────────────────┘
-               │
-               ↓
-┌─────────────────────────────────────────────────┐
-│         LAYER PERSISTENȚĂ                        │
-├─────────────────────────────────────────────────┤
-│ SQLite: feedback_birou.db                       │
-│  - users (autentificare)                        │
-│  - votes (istoricul voturilor)                  │
-│  - sensor_data (date senzori)                   │
-│  - feedback (comenzi sistem)                    │
-└──────────────┬──────────────────────────────────┘
-               │
-               ↓
-┌─────────────────────────────────────────────────┐
-│         LAYER PREZENTARE (Tkinter)              │
-├─────────────────────────────────────────────────┤
-│ LoginWindow      →  Autentificare               │
-│ MainApplication  →  Dashboard principal          │
-│ VotingWindow     →  Interfață votare            │
-│ ChartsWindow     →  Grafice interactive         │
-└─────────────────────────────────────────────────┘
+
+4. Structura proiectului
+  1. Sectiunea Import-uri si configurare - Importa toate bibliotecile necesare si are functia de a detecta platforma de rulare
+  2. Sectiunea Functii utilitare hardware - Functii pentru citirea si conversia datelor de la senzori
+  3. Sectiunea Range-uri Optimale - Defineste intervalele optime pentru fiecare parametru de mediu
+  4. Sectiunea Baze de date - Gestioneaza persistenta datelor in SQLite
+  5. Sectiunea Signal handler - Gestioneaza inchiderea curata a aplicatiei
+  6. Clasa ImprovedFanWidget - Widget grafic pentru afisarea ventilatoarelor animate in interfata
+  7. Clasa LEDMananger -Controleaza cele 8-led-uri fizici conectati la GPIO
+  8. Clasa SensorManager - Nucleul aplicatiei, acesta gestioneaza toate citirile senzorilor si monitorizarea continua
+  9. Clasa LoginWindow - Ecranul de autentificare si creare conturi
+  10. Clasa MainApplication - interfata principala, pagina principala care include dashboardul si ofera optiunea de a intra si pe celelalte pagini pentru a vota sau a vedea grafice sau a vedea istoric comentarii sau istoric voturi
+  11. Clasa ChartsWindow - Interfata pentru analiza grafica avansata a datelor istorice
+  12. Clasa Voting Window - Interfata de votare pentru modificarea parametrilor de mediu
+  13. Sectiunea Executie Principala - Punctul de intra in aplicatie si gestionarea fluxului principal
+
