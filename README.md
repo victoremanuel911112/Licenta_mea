@@ -24,7 +24,7 @@ Acest proiect reprezinta lucrarea mea de licenta ce a dezvoltat un sistem de mon
   -Programare orientata pe module
 
 4. Structura proiectului
-  -Sectiunea Import-uri si configurare - Importa toate bibliotecile necesare si are functia de a detecta platforma de rulare
+  - Sectiunea Import-uri si configurare - Importa toate bibliotecile necesare si are functia de a detecta platforma de rulare
   - Sectiunea Functii utilitare hardware - Functii pentru citirea si conversia datelor de la senzori
   - Sectiunea Range-uri Optimale - Defineste intervalele optime pentru fiecare parametru de mediu
   - Sectiunea Baze de date - Gestioneaza persistenta datelor in SQLite
@@ -32,8 +32,8 @@ Acest proiect reprezinta lucrarea mea de licenta ce a dezvoltat un sistem de mon
   - Clasa ImprovedFanWidget - Widget grafic pentru afisarea ventilatoarelor animate in interfata
   - Clasa LEDMananger -Controleaza cele 8-led-uri fizici conectati la GPIO
   - Clasa SensorManager - Nucleul aplicatiei, acesta gestioneaza toate citirile senzorilor si monitorizarea continua
-  -Clasa LoginWindow - Ecranul de autentificare si creare conturi
-  -Clasa MainApplication - interfata principala, pagina principala care include dashboardul si ofera optiunea de a intra si pe celelalte pagini pentru a vota sau a vedea grafice sau a vedea istoric comentarii sau istoric voturi
+  - Clasa LoginWindow - Ecranul de autentificare si creare conturi
+  - Clasa MainApplication - interfata principala, pagina principala care include dashboardul si ofera optiunea de a intra si pe celelalte pagini pentru a vota sau a vedea grafice sau a vedea istoric comentarii sau istoric voturi
   - Clasa ChartsWindow - Interfata pentru analiza grafica avansata a datelor istorice
   - Clasa Voting Window - Interfata de votare pentru modificarea parametrilor de mediu
   - Sectiunea Executie Principala - Punctul de intra in aplicatie si gestionarea fluxului principal
